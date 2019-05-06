@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet " href="custom.css">
+</head>
+
+<body>
+     <div class="partesuperior">
+            <h1 class="centrar">CHEERLEADING UNIVERSITARIO DE CHILE</h1>
+            <p class="centrar">
+                Aquí te informaremos sobre todo el acontecer de los equipos college de cheerleading de nuestro país
+            </p>
+     </div>
+        <div class="container-fluid container-formulario">
+                <div class="row justify-content-center">
+                        <div id="formulario" class="formulario-contacto col-6">
+                          <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputNombre4">Nombre</label>
+                    <input type="text" class="form-control" id="inputNombre4" placeholder="Nombre y Apellidos">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                  </div>
+                </div>
+               
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputRegion">Region</label>
+                    <select id="inputRegion" class="form-control">
+                            <option selected>Eliga...</option>
+                            <option>I región= Tarapacá</option>
+                            <option>II región= Antogasta</option>
+                            <option>III región = Atacama</option>
+                            <option>IV región= Coquimbo </option>
+                            <option>V región= Valparaiso</option>
+                            <option>VI región= Ohigiins </option>
+                            <option>vII región= Maule </option>
+                            <option>VIII región= Concepción</option>
+                            <option>IX región = Araucanía</option>
+                            <option>X región= Los Lagos </option>
+                            <option>XI región= Aysén</option>
+                            <option>XII región= Magallanes</option>
+                            <option>Metropolitana</option>
+                            <option>XIV región= Los Rios </option>
+                            <option>XV región= Arica y Parinacota </option>
+                            <option>XVI región= Ñuble</option>
+
+                            
+      
+                          </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">Universidad</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Eliga...</option>
+                      <option>Universidad de la Frontera</option>
+                      <option>Universidad de Playa Ancha</option>
+                      <option>Universidad Andres Bello</option>
+                      <option>Universidad de Santiago de Chile</option>
+                      <option>CFT Santo Tomás</option>
+                      
+
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputEdad">Edad</label>
+                    <input type="text" class="form-control" id="inputEdad">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label">
+                            <input type="checkbox" onchange= "mostrarFormulario(this)" class="form-check-input" name="" id="" value="checkedValue">
+                            Confirmar
+                    </label>
+                  </div>
+                  <div id="formNuevoCliente" class="row">
+                        <div class="col">
+                          <div class="form-group">
+                            <label for="User">Al confirmar, ustedes afirma que estos datos pueden ser usados con fin de 
+                                saber su identidad,entregar información a distintas universidades y
+                                ponerse en contacto con usted.
+    
+                            </label>
+                           
+                          </div>
+                        </div>
+                        
+                </div>
+                <button type="submit" class="btn btn-primary" >
+                    Enviar
+                </button> 
+                
+                        
+                </form>
+                </div>
+            </div>
+            </div>
+            
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+<script type="text/javascript">
+  function validaTitulo(input) {
+    //alert(" validando titulo")
+    //esto devolvera el contenido que esta escrito
+    var contenido = input.value;
+    var regex = /[^ a-z0-9\x20]/i;
+
+    if (regex.test(contenido)) {
+      alert("contiene simbolos")
+
+    }
+
+  }
+  function mostrarFormulario(checkBox){
+    if(checkBox.checked){
+      document.getElementById("formNuevoCliente").style.display="flex" ;
+    }
+    else{
+      document.getElementById("formNuevoCliente").style.display="none" ;
+    }
+  }
+
+</script>
+
+</html>

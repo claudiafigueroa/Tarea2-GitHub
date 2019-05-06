@@ -1,0 +1,60 @@
+.centrar{
+    text-align: center;
+    
+    
+}
+
+.portada{
+    height: 620px;
+    text-decoration-color: black;
+}
+#carouselExampleCaptions{
+    margin-right: 300px;
+    margin-left: 300px;
+
+    padding: 2%;
+}
+
+
+.link-seccion{
+    display: inline-block;
+    background-color: aquamarine;
+    font-size: 20px;
+    height: 100px;
+    width: 30%;
+    border-radius: 5px;
+    padding-top: 4%;
+
+
+    }
+.secciones{
+    
+    background-color: #e3f2fd;
+    text-align: center;
+    
+    
+}
+
+.link-seccion:hover{
+    background-color: rgb(43, 226, 186);
+    
+}
+.container-formulario{
+    background-image:url(Team-Chile.jpg);
+
+}
+.formulario-contacto{
+    background-color: #e3f2fd;
+    margin:14%;
+    border-radius: 5px;
+    padding: 2%;
+}
+#formNuevoCliente{
+ display: none;
+
+}
+
+.Contenido{
+    background-color:cadetblue ;
+    
+}
